@@ -1,6 +1,6 @@
-Pide una nota (0-10).
+## Pide una nota (0-10).
 
-Si la nota es mayor o igual que 5:
+## Si la nota `es mayor` o `igual que` `5`:
     Aprobado
-En caso contrario:
+## En caso contrario:
     Suspenso

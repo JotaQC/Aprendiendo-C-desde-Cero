@@ -1,17 +1,17 @@
-Pide un número al usuario.
+## Pide un número al usuario.
 
-Por ejemplo:
+## Por ejemplo:
 
-Introduce un número: 7
+    Introduce un número: 7
 
-Y muestra:
+## Y muestra:
 
-1
-2
-3
-4
-5
-6
-7
+    1
+    2
+    3
+    4
+    5
+    6
+    7
 
-Puedes hacerlo con while o con for.
+## Puedes hacerlo con `while` o con `for`.

@@ -1,4 +1,4 @@
-# Haz un programa que pida un número `n` y muestre su tabla de multiplicar del `1` al `10`.
+## Haz un programa que pida un número `n` y muestre su tabla de multiplicar del `1` al `10`.
 
 ## Ejemplo:
 

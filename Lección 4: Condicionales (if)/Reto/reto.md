@@ -1,13 +1,14 @@
-Pide dos números.
+## Pide dos números.
 
-Muestra cuál es mayor.
+## Muestra cuál es `mayor`.
 
-Ejemplo:
+## Ejemplo:
+    
+    Primer número: 7
+    Segundo número: 12
 
-Primer número: 7
-Segundo número: 12
+    El mayor es 12
 
-El mayor es 12
-
-Si son iguales, puedes mostrar:
-Son iguales
+## Si son iguales, puedes mostrar:
+    
+    Son iguales

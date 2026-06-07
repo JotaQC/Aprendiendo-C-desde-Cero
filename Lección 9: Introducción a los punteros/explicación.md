@@ -1,173 +1,152 @@
-Hasta ahora has trabajado con variables:
+## Hasta ahora has trabajado con variables:
 
-int edad = 25;
-
-Cuando ejecutas el programa, la variable se guarda en una posición de memoria.
-
-Podemos imaginarlo así:
-
-Dirección       Valor
-----------      ----------
-10000           25
-
-(La dirección real será otra, esto es solo un ejemplo.)
-
-
-
-Obtener la dirección de una variable:
-
-Ya has visto este símbolo: &
-
-Por ejemplo:
-
-#include <stdio.h>
-
-int main() {
     int edad = 25;
 
-    printf("%p\n", &edad);
+## Cuando ejecutas el programa, la variable se guarda en una posición de memoria.
 
-    return 0;
-}
+## Podemos imaginarlo así:
 
-Salida (ejemplo):
+    Dirección       Valor
+    ----------      ----------
+    10000           25
 
-0x7ffcb4a3f8cc
+### (La dirección real será otra, esto es solo un ejemplo.)
 
-Esa es la dirección de memoria donde está guardada edad.
+# Obtener la dirección de una variable:
 
+## Ya has visto este símbolo: `&`
 
+## Por ejemplo:
 
-¿Qué es un puntero?
+    #include <stdio.h>
+    
+    int main() {
+        int edad = 25;
+    
+        printf("%p\n", &edad);
+    
+        return 0;
+    }
 
-Un puntero es una variable que guarda una dirección de memoria.
+## Salida (ejemplo):
 
-Ejemplo:
+    0x7ffcb4a3f8cc
 
-int edad = 25;
-int *p = &edad;
+### Esa es la dirección de memoria donde está guardada edad.
 
-Aquí: p
-contiene la dirección de edad.
+# ¿Qué es un puntero?
 
-Podemos imaginar:
+## Un puntero es una variable que guarda una dirección de memoria.
 
-edad = 25
+## Ejemplo:
+    
+    int edad = 25;
+    int *p = &edad;
 
-p -----> edad
+## Aquí: `p`
 
+### contiene la dirección de edad.
 
+## Podemos imaginar:
 
+    edad = 25
 
-Declarar un puntero:
+    p -----> edad
 
-int *p;
+# Declarar un puntero:
 
-Significa:
+    int *p;
+
+## Significa:
+    
     p es un puntero a un entero.
 
+# Guardar una dirección:
 
+    int edad = 25;
 
+    int *p = &edad;
 
-Guardar una dirección:
+## `&edad` significa:
 
-int edad = 25;
-
-int *p = &edad;
-
-&edad significa:
     dirección de memoria de edad
 
+# Mostrar el contenido del puntero:
 
+    printf("%p\n", p);
 
+### Muestra la dirección almacenada.
 
-Mostrar el contenido del puntero:
+# El operador `*`:
 
-printf("%p\n", p);
+## El símbolo `*` tiene dos usos distintos.
 
-Muestra la dirección almacenada.
+## Declaración:
 
+    int *p;
 
-
-El operador *:
-
-El símbolo * tiene dos usos distintos.
-
-
-
-Declaración:
-
-int *p;
-
-Aquí significa:
+## Aquí significa:
 
     p es un puntero.
 
+## Acceso al valor apuntado:
 
+    *p
 
-Accesi al valor apuntado:
-
-*p
-
-Aquí significa:
+## Aquí significa:
 
     ve a la dirección almacenada y dame el valor.
 
+## Ejemplo:
 
-Ejemplo:
+    #include <stdio.h>
+    
+    int main() {
+        int edad = 25;
+    
+        int *p = &edad;
+    
+        printf("%d\n", *p);
+    
+        return 0;
+    }
 
-#include <stdio.h>
+## Salida:
 
-int main() {
-    int edad = 25;
+    25
 
-    int *p = &edad;
+# Modificar una variable mediante un puntero:
 
-    printf("%d\n", *p);
+    #include <stdio.h>
+    
+    int main() {
+        int edad = 25;
+    
+        int *p = &edad;
+    
+        *p = 40;
+    
+        printf("%d\n", edad);
+    
+        return 0;
+    }
 
-    return 0;
-}
+## Salida:
 
-Salida:
+    40
 
-25
+### Aunque hemos cambiado `*p`, en realidad hemos modificado `edad`.
 
+## ¿Por qué `scanf` usa `&`?:
 
+## Recuerda:
 
-Modificar una variable mediante un puntero:
+    scanf("%d", &edad);
 
-#include <stdio.h>
+### Ahora ya puedes entenderlo.
 
-int main() {
-    int edad = 25;
-
-    int *p = &edad;
-
-    *p = 40;
-
-    printf("%d\n", edad);
-
-    return 0;
-}
-
-Salida:
-
-40
-
-Aunque hemos cambiado *p, en realidad hemos modificado edad.
-
-
-
-¿Por qué scanf usa &?:
-
-Recuerda:
-
-scanf("%d", &edad);
-
-Ahora ya puedes entenderlo.
-
-scanf necesita saber:
+## `scanf` necesita saber:
 
     ¿Dónde debo guardar el número que introduzca el usuario?
 
-Por eso le pasamos la dirección de memoria.
+### Por eso le pasamos la dirección de memoria.

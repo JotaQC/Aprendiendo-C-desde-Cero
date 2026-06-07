@@ -1,12 +1,10 @@
-Para usar estas funciones:
+# Para usar estas funciones:
 
     #include <string.h>
 
+# `strlen()` -- longitud de una cadena
 
-
-strlen() -- longitud de una cadena
-
-Ejemplo:
+## Ejemplo:
 
     #include <stdio.h>
     #include <string.h>
@@ -19,95 +17,90 @@ Ejemplo:
         return 0;
     }
 
-Salida:
+## Salida:
 
     6
 
-Porque:
+## Porque:
 
     C a r l o s
     1 2 3 4 5 6
 
+# Importante:
 
+### `strlen()` no cuenta el carácter especial de fin de cadena (`'\0'`).
 
-Importante:
-
-strlen() no cuenta el carácter especial de fin de cadena ('\0').
-
-Por eso:
+## Por eso:
 
     char nombre[] = "Ana";
 
-ocupa 4 posiciones en memoria:
+### ocupa 4 posiciones en memoria:
 
     A n a \0
 
-pero:
+### pero:
 
     strlen(nombre)
 
-devuelve:
+### devuelve:
 
     3
 
+# Otra cosa importante:
 
-Otra cosa importante:
-
-La función:
+## La función:
 
     strlen(nombre)
 
-no devuelve un int.
+### no devuelve un `int`.
 
-Devuelve un tipo llamado:
+## Devuelve un tipo llamado:
 
     size_t
 
-que se utiliza para tamaños y cantidades de memoria.
+### que se utiliza para tamaños y cantidades de memoria.
 
-Por eso la forma correcta de imprimirlo es:
+## Por eso la forma correcta de imprimirlo es:
 
     printf("%zu\n", strlen(nombre));
 
-donde:
+## donde:
 
     %z --> modificador para size_t
     u --> entero sin signo (unsigned)
 
-¿Podría usar %d?:
+## ¿Podría usar `%d`?:
 
-A veces parece funcionar:
+### A veces parece funcionar:
 
     printf("%d\n", strlen(nombre));
 
-pero no es lo correcto.
+### pero no es lo correcto.
 
-El compilador puede incluso avisarte:
+### El compilador puede incluso avisarte:
 
     warning: format '%d' expects argument of type 'int'
 
-Por eso se recomienda:
+### Por eso se recomienda:
 
     printf("%zu\n", strlen(nombre));
 
-siempre que imprimas el resultado de strlen().
+### siempre que imprimas el resultado de `strlen()`.
 
+# `strcpy()` -- copiar cadenas
 
-
-strcpy() -- copiar cadenas
-
-No puedes hacer:
+## No puedes hacer:
 
     char nombre[20];
     nombre = "Ana";
 
-Eso da error.
+### Eso da error.
 
-Para copiar cadenas:
+## Para copiar cadenas:
 
     strcpy(destino, origen);
 
-Ejemplo:
+## Ejemplo:
 
     #include <stdio.h>
     #include <string.h>
@@ -122,40 +115,35 @@ Ejemplo:
         return 0;
     }
 
-Salida:
+## Salida:
 
     Ana
 
+# `strcmp()` -- comparar cadenas:
 
-
-
-strcmp() -- comparar cadenas:
-
-Con enteros hacemos:
+## Con enteros hacemos:
 
     if (a == b)
 
-Con cadenas NO.
+### Con cadenas _NO_.
 
-Esto es incorrecto:
+## Esto es incorrecto:
 
     if (nombre1 == nombre2)
 
-Debemos usar:
+## Debemos usar:
 
     strcmp(nombre1, nombre2)
 
-
-Ejemplo:
+## Ejemplo:
 
     if (strcmp(nombre1, nombre2) == 0)
 
-significa:
+## significa:
 
     Las cadenas son iguales
 
-
-Ejemplo completo:
+## Ejemplo completo:
 
     char a[] = "Ana";
     char b[] = "Ana";
@@ -164,93 +152,80 @@ Ejemplo completo:
         printf("Iguales\n");
     }
 
-Salida:
+## Salida:
 
     Iguales
 
+# `strcat()` -- unir cadenas:
 
-
-
-strcat() -- unir cadenas:
-
-Supongamos:
+## Supongamos:
 
     char nombre[50] = "Ana";
     char apellido[] = " Garcia";
 
-Podemos hacer:
+## Podemos hacer:
 
     strcat(nombre, apellido);
 
-Ahora:
+## Ahora:
 
     nombre
 
-contiene:
+## contiene:
 
     Ana García
 
-
-Ejemplo:
+## Ejemplo:
 
     printf("%s\n", nombre);
 
-Salida:
+## Salida:
 
     Ana García
 
+# Cuidado con el tamaño:
 
-
-
-Cuidado con el tamaño:
-
-Si haces:
+## Si haces:
 
     char nombre[10] = "Ana";
 
-y luego intentas concatenar mucho texto:
+### y luego intentas concatenar mucho texto:
 
     strcat(nombre, " Fernandez");
 
-puedes sobreescribir memoria.
+### puedes sobreescribir memoria.
 
-Siempre asegúrate de que el array tenga espacio suficiente.
+### Siempre asegúrate de que el array tenga espacio suficiente.
 
+# Leer nombres con espacios:
 
-
-
-Leer nombres con espacios:
-
-Hasta ahora has usado:
+## Hasta ahora has usado:
 
     scanf("%19s", nombre);
 
-Problema:
+# Problema:
 
-Si escribes:
+## Si escribes:
 
     Juan Pérez
 
-solo lee:
+## solo lee:
 
     Juan
 
-
-Para leer una línea completa:
+## Para leer una línea completa:
 
     fgets(nombre, sizeof(nombre), stdin);
 
-Ejemplo:
+## Ejemplo:
 
     char nombre[50];
 
     fgets(nombre, sizeof(nombre), stdin);
 
+# Concepto importante:
 
-
-Concepto importante:
-
-Con cadenas en C:
+## Con cadenas en C:
 
     ==          ❌
     strcmp      ✅

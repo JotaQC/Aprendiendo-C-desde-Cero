@@ -1,9 +1,7 @@
-Copia y pega el archivo main.c, crea uno nuevo o modifica el actual para que muestre lo siguiente:
+## Copia y pega el archivo main.c, crea uno nuevo o modifica el actual para que muestre lo siguiente:
 
--- Imprimir con código --
+  Me llamo Ana
+  Estoy aprendiendo C
 
-Me llamo Ana
-Estoy aprendiendo C
-
-- # - Pista:
-printf("texto\n");
+### Pista:
+  printf("texto\n");

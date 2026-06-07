@@ -1,67 +1,61 @@
-Hasta ahora todos los arrays tenían un tamaño fijo.
+## Hasta ahora todos los arrays tenían un tamaño fijo.
 
-Ejemplos:
+## Ejemplos:
     
     int numeros[5];
 
     char nombre[20];
 
-El problema es que el tamaño debe conocerse al escribir el programa.
+## El problema es que el tamaño debe conocerse al escribir el programa.
 
-¿Y si el usuario quiere introducir 100 números?
+### ¿Y si el usuario quiere introducir 100 números?
 
-¿O 1000?
+### ¿O 1000?
 
-¿O un número que no conocemos hasta que se ejecuta el programa?
+### ¿O un número que no conocemos hasta que se ejecuta el programa?
 
-Para eso existe la memoria dinámica.
+## Para eso existe la memoria dinámica.
 
+# Memoria automática vs dinámica:
 
-
-Memoria automática vs dinámica:
-
-Hasta ahora has usado variables como:
+## Hasta ahora has usado variables como:
 
     int numero = 10;
 
-o:
+## o:
 
     int numeros[5];
 
-Estas variables viven en una zona llamada stack (pila).
+## Estas variables viven en una zona llamada `stack` (`pila`).
 
-Cuando la función termina:
+## Cuando la función termina:
 
     void funcion() {
         int x = 10;
     }
 
-x desaparece automáticamente.
+### `x` desaparece automáticamente.
 
 
-La memoria dinámica vive en otra zona llamada heap.
+## La memoria dinámica vive en otra zona llamada `heap`.
 
-Allí podemos reservar memoria durante la ejecución del programa.
+### Allí podemos reservar memoria durante la ejecución del programa.
 
+# `malloc`:
 
-
-malloc:
-
-Para usarla:
+## Para usarla:
 
     #include <stdlib.h>
 
-Función:
+## Función:
 
     malloc(...)
 
-Significa:
+## Significa:
 
     Reserva memoria y devuelve su dirección.
 
-
-
-Primer ejemplo:
+## Primer ejemplo:
 
     #include <stdio.h>
     #include <stdlib.h>
@@ -81,75 +75,63 @@ Primer ejemplo:
         return 0;
     }
 
-Salida:
+## Salida:
+    
     42
-
-
-
-
-¿Qué hace sizeof?
+    
+# ¿Qué hace `sizeof`?
 
     sizeof(int)
 
-devuelve el tamaño de un entero en bytes.
+### devuelve el tamaño de un entero en bytes.
 
-Normalmente:
+## Normalmente:
+    
     4
-aunque depende del sistema.
 
+### aunque depende del sistema.
 
-
-
-¿Qué devuelve malloc?
+# ¿Qué devuelve `malloc`?
 
     p = malloc(sizeof(int));
 
-Podemos imaginar:
+## Podemos imaginar:
 
     Dirección 5000 -> espacio para un int
 
-Entonces:
+## Entonces:
    
     p = 5000
 
+## ¿Por qué usamos un puntero?
 
+### Porque `malloc` devuelve una dirección
 
+### Las direcciones se almacenan en punteros.
 
-¿Por qué usamos un puntero?
+# Liberar memoria:
 
-Porque malloc devuelve una dirección
-
-Las direcciones se almacenan en punteros.
-
-
-
-Liberar memoria:
-
-Cuando termines:
+## Cuando termines:
 
     free(p);
 
-Muy importante.
+### Muy importante.
 
-Si no liberas la memoria:
+## Si no liberas la memoria:
 
     memory leak
 
-(fuga de memoria)
+### (fuga de memoria)
 
+# Array dinámico:
 
-
-
-Array dinámico:
-
-Reservar espacio para 5 enteros:
+## Reservar espacio para 5 enteros:
 
     int *numeros;
 
     numeros = malloc(5 * sizeof(int));
 
-
-Ahora podemos usarlo como si fuera un array normal:
+## Ahora podemos usarlo como si fuera un array normal:
 
     numeros[0] = 10;
     numeros[1] = 20;
@@ -157,73 +139,62 @@ Ahora podemos usarlo como si fuera un array normal:
     numeros[3] = 40;
     numeros[4] = 50;
 
-
-Mostrar:
+## Mostrar:
 
     for (int i = 0; i < 5; i++) {
         printf("%d\n", numeros[i]);
     }
 
-
-Liberar:
+## Liberar:
 
     free(numeros);
 
+## Tamaño decidido por el usuario:
 
-
-
-Tamaño decidido por el usuario:
-
-Aquí aparece la verdadera utilidad.
+### Aquí aparece la verdadera utilidad.
 
     int n;
 
-
-Preguntamos:
+## Preguntamos:
 
     printf("¿Cuántos números quieres guardar?: ");
     scanf("%d", &n);
 
-
-Reservamos:
+## Reservamos:
  
     int *numeros;
 
     numeros = malloc(n * sizeof(int));
 
-Ahora el tamaño depende del usuario.
+### Ahora el tamaño depende del usuario.
 
+# Comprobar errores:
 
+## `malloc` puede fallar.
 
-Comprobar errores:
-
-malloc puede fallar.
-
-Por eso es buena práctica:
+## Por eso es buena práctica:
 
     if (numeros == NULL) {
         prinft("Error al reservar memoria.\n");
         return 1;
     }
-    
 
+# Lo más importante de hoy:
 
-
-Lo más importante de hoy:
-
-Cuando veas:
+## Cuando veas:
 
     malloc(...)
 
-piensa:
+## piensa:
 
     "Estoy pidiendo memoria al sistema operativo."
 
-Y cuando veas:
+## Y cuando veas:
 
     free(...)
 
-piensa:
+## piensa:
 
     "Estoy devolviendo esa memoria."
+    
 

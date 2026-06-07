@@ -1,4 +1,4 @@
-# Hasta ahora hemos guardado un único dato:
+## Hasta ahora hemos guardado un único dato:
 
     int edad = 30;
 

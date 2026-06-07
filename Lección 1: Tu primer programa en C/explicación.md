@@ -31,17 +31,17 @@ printf . Muestra texto en pantalla, \n es un salto de línea. Ejemplo:
 Salida:
 
     Hola
---> Adiós
+    Adiós
 
--- return 0 . Indica que el programa terminó correctamente.
+return 0 . Indica que el programa terminó correctamente.
 
 
-- # - Regla importante: cada intrucción termina con ;
+## Regla importante: cada intrucción termina con ;
 
--- Correcto:
+Correcto:
 
---> printf("Hola");
+    printf("Hola");
 
--- Incorrecto:
+Incorrecto:
 
---> printf("Hola")
+    printf("Hola")

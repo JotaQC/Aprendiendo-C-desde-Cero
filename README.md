@@ -15,6 +15,7 @@ En este repo se encuentran las lecciones que voy aprendiendo en C. Puede que no 
 ## **[Lección 12](https://github.com/JotaQC/Aprendiendo-C-desde-Cero/tree/main/Lecci%C3%B3n%2012%3A%20Estructuras%20(struct)):** _Estructuras (struct)_
 ## **[Lección 13](https://github.com/JotaQC/Aprendiendo-C-desde-Cero/tree/main/Lecci%C3%B3n%2013%3A%20Memoria%20din%C3%A1mica%20(malloc%2C%20free)):** _Memoria dinámica (malloc, free)_
 ## **[Lección 14](https://github.com/JotaQC/Aprendiendo-C-desde-Cero/tree/main/Lecci%C3%B3n%2014%3A%20string.h):** _string.h_
+## **[Lección 15](https://github.com/JotaQC/Aprendiendo-C-desde-Cero/tree/main/Lecci%C3%B3n%2015%3A%20Archivos%20(FILE)):** _Archivos (FILE)_
 
 > [!IMPORTANT]
 > 7 de Junio de 2026, aún no está acabado.

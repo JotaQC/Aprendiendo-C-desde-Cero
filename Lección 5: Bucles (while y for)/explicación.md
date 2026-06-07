@@ -1,139 +1,140 @@
-Un bucle permite repetir instrucciones.
+# Un bucle permite repetir instrucciones.
 
-La estructura más sencilla es:
+## La estructura más sencilla es:
 
-while (condicion) {
-    // código que se repite
-}
+    while (condicion) {
+        // código que se repite
+    }
 
-Ejemplo:
+## Ejemplo:
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
+    int main() {
+        int contador = 1;
+    
+        while (contador <= 5) {
+            printf("%d\n", contador);
+            contador++;
+        }
+    
+        return 0;
+    }
+
+## Salida:
+    1
+    2
+    3
+    4
+    5
+
+## ¿Qué hace `contador++`?
+### Es una forma abreviada de escribir:
+
+    contador = contador + 1;
+
+## Por ejemplo:
+
+    int x = 3;
+    
+    x++;
+
+### Ahora `x` vale `4`.
+
+## Cómo funciona el bucle paso a paso.
+
+## Inicialmente:
+
+    contador = 1
+
+## Comprueba:
+
+    contado <= 5
+
+## Es verdadero -> imprime `1`.
+
+## Luego:
+
+    contador++;
+
+## Ahora vale `2`.
+
+## Vuelve al principio y repite.
+
+## Cuando llega a `6`:
+
+    6 <= 5
+
+### es falso y el bucle termina.
+
+
+# Cuidado: bucles infinitos
+
+## Este programa nunca termina:
+
+    while (1) {
+        printf("Hola\n");
+    }
+
+### porque la condición siempre es verdadera.
+
+## Otro error típico:
+
     int contador = 1;
-
+    
     while (contador <= 5) {
         printf("%d\n", contador);
-        contador++;
     }
 
-    return 0;
-}
+## Aquí olvidamos incrementar contador.
 
-Salida:
-1
-2
-3
-4
-5
-
-¿Qué hace contador++?
-Es una forma abreviada de escribir:
-
-contador = contador + 1;
-
-Por ejemplo:
-
-int x = 3;
-
-x++;
-
-Ahora x vale 4.
-
-Cómo funciona el bucle paso a paso.
-
-Inicialmente:
-
-contador = 1
-
-Comprueba:
-
-contado <= 5
-
-Es verdadero -> imprime 1.
-
-Luego:
-
-contador++;
-
-Ahora vale 2.
-
-Vuelve al principio y repite.
-
-Cuando llega a 6:
-
-6 <= 5
-
-es falso y el bucle termina.
+### Resultado: Imprime `1` para siempre.
 
 
-Cuidado: bucles infinitos
-Este programa nunca termina:
+## Bucle `for`:
 
-while (1) {
-    printf("Hola\n");
-}
+## Muy utilizado cuando sabemos cuántas veces queremos repetir algo.
 
-porque la condición siempre es verdadera.
+## La estructura es:
 
-Otro error típico:
-
-int contador = 1;
-
-while (contador <= 5) {
-    printf("%d\n", contador);
-}
-
-Aquí olvidamos incrementar contador.
-
-Resultado: Imprime 1 para siempre.
-
-
-Bucle for:
-
-Muy utilizado cuando sabemos cuántas veces queremos repetir algo.
-
-La estructura es:
-
-for (inicio; condicion; incremento) {
-    // código
-}
-
-El programa anterior puede escribirse así:
-
-#include <stdio.h>
-
-int main() {
-    for (int i = 1; i<= 5; i++) {
-        printf("%d\n", i);
+    for (inicio; condicion; incremento) {
+        // código
     }
 
-    return 0;
-}
+## El programa anterior puede escribirse así:
 
-Produce exactamente la misma salida:
-1
-2
-3
-4
-5
+    #include <stdio.h>
+    
+    int main() {
+        for (int i = 1; i<= 5; i++) {
+            printf("%d\n", i);
+        }
+    
+        return 0;
+    }
 
-¿Qué significa cada parte?
+## Produce exactamente la misma salida:
+    1
+    2
+    3
+    4
+    5
 
-for (int i = 1; i <= 5; i++)
+## ¿Qué significa cada parte?
 
-Inicio:
-int i = 1;
+    for (int i = 1; i <= 5; i++)
 
-Se ejecuta una sola vez.
+## Inicio:
+    int i = 1;
 
-Condición:
-i <= 5;
+### Se ejecuta una sola vez.
 
-Mientras sea verdadera, el bucle continúa.
+## Condición:
+    i <= 5;
 
-Incremento:
-i++
+### Mientras sea verdadera, el bucle continúa.
 
-Se ejecuta después de cada vuelta.
+## Incremento:
+    i++
+
+### Se ejecuta después de cada vuelta.

@@ -1,23 +1,23 @@
-Pide un número n.
+## Pide un número `n`.
 
-Calcula la suma de todos los números desde 1 hasta n.
+## Calcula la suma de todos los números desde `1` hasta `n`.
 
-Ejemplo:
+## Ejemplo:
 
-Introduce un número: 5
+    Introduce un número: 5
 
-Resultado:
+## Resultado:
 
-La suma es 15.
+    La suma es 15.
 
-Porque:
+## Porque:
 
-1 + 2 + 3 + 4 + 5 = 15
+    1 + 2 + 3 + 4 + 5 = 15
 
-Pista:
+## Pista:
 
-Necesitarás una variable acumuladora:
+## Necesitarás una variable acumuladora:
 
-int suma = 0,
+    int suma = 0,
 
-y dentro del bucle ir haciendo algo con ella.
+## y dentro del bucle ir haciendo algo con ella.

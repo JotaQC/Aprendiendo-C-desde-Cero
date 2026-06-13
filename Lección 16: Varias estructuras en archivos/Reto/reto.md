@@ -1,4 +1,4 @@
-Usa el mismo archivo:
+## Usa el mismo archivo:
 
     Ana 20
     Luis 35

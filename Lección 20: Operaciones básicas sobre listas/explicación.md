@@ -183,3 +183,17 @@
     5
     10
     20
+
+
+## Con esto entendemos la diferencia entre:
+
+    agregarInicio(...)
+
+## y:
+
+    agregarFinal(...)
+
+- `agregarInicio()` → el último que insertas sale el primero (LIFO).
+- `agregarFinal()` → mantiene el orden de inserción (FIFO).
+
+### Es una idea importante porque más adelante aparece en estructuras como pilas (stacks) y colas (queues).

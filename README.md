@@ -21,6 +21,7 @@ En este repo se encuentran las lecciones que voy aprendiendo en C. Puede que no 
 ## **[Lección 18](https://github.com/JotaQC/Aprendiendo-C-desde-Cero/tree/main/Lecci%C3%B3n%2018%3A%20Listas%20enlazadas):** _Listas enlazadas_
 ## **[Lección 19](https://github.com/JotaQC/Aprendiendo-C-desde-Cero/tree/main/Lecci%C3%B3n%2019%3A%20Insertar%20nodos%20al%20final%20de%20una%20lista):** _Insertar nodos al final de una lista_
 ## **[Lección 20](https://github.com/JotaQC/Aprendiendo-C-desde-Cero/tree/main/Lecci%C3%B3n%2020%3A%20Operaciones%20b%C3%A1sicas%20sobre%20listas):** _Operaciones básicas sobre listas_
+## **[Lección 21](https://github.com/JotaQC/Aprendiendo-C-desde-Cero/tree/main/Lecci%C3%B3n%2021%3A%20Eliminar%20y%20buscar%20elementos%20concretos):** _Eliminar y buscar elementos concretos_
 
 > [!IMPORTANT]
 > 17 de Junio de 2026, aún no está acabado.
